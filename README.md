@@ -1,0 +1,1 @@
+# app-seed-shared-modules
