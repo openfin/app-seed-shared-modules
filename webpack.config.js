@@ -23,14 +23,16 @@ var config = {
                 loader: ['babel'], // The module to load. "babel" is short for "babel-loader"
                 query: {
                     presets: ['react', 'es2015']
-                }
+                },
+                "plugins": ["transform-object-assign"],
             },
+
             {
                 // When you encounter SCSS files, parse them with node-sass,
                 // then return the results as a string of CSS
                 test: /\.scss/,
                 loader: 'style!css!sass',
-                loaders: ['style', 'css', 'sass'],
+                loaders: ['style', 'css', 'sass']
             },
             { test: /\.png$/, loader: "url-loader?limit=100000" }
 

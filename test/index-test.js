@@ -30,7 +30,6 @@ describe("The Vanilla Header component should render", ()=>{
     });
 });
 
-
 describe("Passing a config should pass those properties to the created Object", ()=>{
     let _header3 = Header.create({text:"Config text"});
 
@@ -40,4 +39,27 @@ describe("Passing a config should pass those properties to the created Object", 
         expect(_header3.getText()).toEqual("Config text");
     })
 });
+
+describe("The subhead should be able to be set - via the API and the config", ()=>{
+    it("The subhead should be able to be set via the api", ()=>{
+        let _header4 = Header.create();
+        _header4.setSubText("This is the set subtext 1");
+        expect(_header4.getSubText()).toEqual("This is the set subtext 1");
+    });
+
+    it("The subhead should be able to be set via the config", ()=>{
+        let _header5 = Header.create({subText:"SubHead set via the config."});
+        expect(_header5.getSubText()).toEqual("SubHead set via the config.");
+    });
+});
+
+describe("Passing incorrect data types hould throw errors.",()=>{
+    it("setText should throw an Error if passed the wrong data type", ()=>{
+        let _header6 = Header.create();
+        expect(()=>{ _header6.setText({text:"hello"}); }).toThrow(new Error('setText requires a String'));
+        expect(()=>{ _header6.setSubText({text:"hello"}); }).toThrow(new Error('setSubText requires a String'));
+    })
+});
+
+
 

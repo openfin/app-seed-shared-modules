@@ -1,0 +1,38 @@
+{
+  "startup_app": {
+    "name": "Openfin Modules",
+    "description": "Openfin Modules Demo",
+    "url": "http://localhost:9075",
+    "icon": "http://cdn.openfin.co/demos/hyperblotter/images/hyperblotter_icon.ico",
+    "uuid": "OpenfinModules",
+    "autoShow": true,
+    "defaultWidth": 500,
+    "maxWidth": 600,
+    "minWidth": 300,
+    "maxHeight": 600,
+    "defaultHeight": 500,
+    "minHeight": 300,
+    "defaultTop": 50,
+    "defaultLeft": 50,
+    "resizable": true,
+    "maximizable": true,
+    "frame": false,
+    "alwaysOnTop":false,
+    "cornerRounding": {
+      "width": 5,
+      "height": 5
+    }
+  },
+  "runtime": {
+    "arguments": "",
+    "version": "5.44.9.2"
+  },
+
+  "splashScreenImage": "http://cdn.openfin.co/demos/hyperblotter/images/splashscreen.png",
+  "shortcut": {
+    "company": "OpenFin",
+    "description": "Module Demo",
+    "icon": "http://cdn.openfin.co/demos/hyperblotter/images/hyperblotter_icon.ico",
+    "name": "Module Demo"
+  }
+}

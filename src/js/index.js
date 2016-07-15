@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from '../js/App.js';
 import Header from '../js/components/common-header.js';
-import HeaderVanilla from '../js/vanilla_conmponents/vanilla-header.js'
+import HeaderVanilla from '../js/vanilla_conmponents/vanilla-header.js';
+import 'core-js';
+
 require  ("../sass/entry.scss");
 
 document.addEventListener("DOMContentLoaded", function(){
