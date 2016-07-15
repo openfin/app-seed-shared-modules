@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/karma start --single-run --browsers Chrome",
-    "build-main": " webpack --config webpack.config.js --watch",
-    "build-child": " webpack --config webpack-childwin.config.js --watch",
-    "build": "build-main  && build-child",
+    "build-main": "webpack --config webpack.config.js --watch",
+    "build-child": "webpack --config webpack-childwin.config.js --watch",
+    "build": "webpack --config webpack.config.js && webpack --config webpack-childwin.config.js",
     "start": "node server.js"
   },
   "keywords": [
@@ -35,6 +35,7 @@
     "webpack": "1.13.1"
   },
   "devDependencies": {
+    "babel-runtime": "6.9.2",
     "jasmine": "2.4.1",
     "karma": "0.13.19",
     "karma-browserify": "5.1.0",

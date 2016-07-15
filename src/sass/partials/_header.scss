@@ -4,16 +4,14 @@
   background-color: #24282d;
   color: #ffffff;
   padding: 10px;
+  -webkit-app-region: drag;
+
   .header-text{
     font-size: 18px;
   }
 
   .header-sub-text{
     font-size: 14px;
-
   }
-
-
-
 }
 
