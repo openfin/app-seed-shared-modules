@@ -1,0 +1,45 @@
+{
+  "name": "OpenFin_appseed",
+  "version": "1.0.0",
+  "description": "A vanilla simple openfin app to be used as a starting point for app development",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/karma start --single-run --browsers Chrome",
+    "build-main": " webpack --config webpack.config.js --watch",
+    "build-child": " webpack --config webpack-childwin.config.js --watch",
+    "build": "build-main  && build-child",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "OpenFin"
+  ],
+  "author": "Graham Clapham",
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "6.10.4",
+    "babel-loader": "6.2.4",
+    "babel-preset-es2015": "6.9.0",
+    "babel-preset-react": "6.11.1",
+    "bootstrap-sass": "3.3.6",
+    "browserify": "13.0.1",
+    "css-loader": "0.23.1",
+    "express": "^4.13.3",
+    "file-loader": "0.9.0",
+    "node-sass": "3.8.0",
+    "react": "15.2.1",
+    "react-dom": "15.2.1",
+    "sass-loader": "4.0.0",
+    "style-loader": "0.13.1",
+    "url-loader": "0.5.7",
+    "webpack": "1.13.1"
+  },
+  "devDependencies": {
+    "jasmine": "2.4.1",
+    "karma": "0.13.19",
+    "karma-browserify": "5.1.0",
+    "karma-chrome-launcher": "0.2.2",
+    "karma-jasmine": "0.3.6",
+    "karma-webpack": "1.7.0",
+    "watchify": "3.7.0"
+  }
+}
