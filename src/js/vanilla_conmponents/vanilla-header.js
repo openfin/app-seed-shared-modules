@@ -4,28 +4,35 @@ import Enums from '../Enums.js';
 let Header = {
     config:{},
     render:function(target = null){
-        this.config.target = target;
-
-        console.log("Render called ", this.getText())
         if ( !target && !this.getTarget() ){
             console.log("No target ")
          return;
         };
+
+        this.config.target = target;
+
+
         let template = `<div class="header-vanilla">
-            <input id="header-input" class="no-drag header-textbox"  type="text" value=${this.getText()} />
             <div class="header-text">${this.getText()}</div>
             <div class="header-sub-text">${this.getSubText()}</div>
+            <p>Input header text here:</p>
+            <input id="header-input" class="no-drag header-textbox form-control"  type="text" value=${'"'+this.getText()+'"'} />
+
         </div>`
         this.getTarget().innerHTML = template;
         let _input = document.querySelector('#header-input');
 
-        _input.addEventListener('input', (e)=>{
-            fin.desktop.InterApplicationBus.publish(Enums.COMMON_HEADER_CHANGED, {text:e.target.value})
-        });
+        if(_input) {
+            _input.addEventListener('input', (e)=>{
+                console.log(" text:e.target.value ",e.target.value);
 
-        _input.focus();
-        var length = _input.value.length;
-        _input.setSelectionRange(length, length);
+                fin.desktop.InterApplicationBus.publish(Enums.COMMON_HEADER_CHANGED, {text:e.target.value})
+            });
+
+            _input.focus();
+            var length = _input.value.length;
+            _input.setSelectionRange(length, length);
+        }
 
     },
     getTarget:function(){
@@ -56,8 +63,8 @@ let Header = {
 export default {create:(config)=>{
     let _config = {
         target: null,
-        text: "Default text",
-        subText:"This is the subtext"
+        text: "Default headline text",
+        subText:"Default subtext"
     };
 
     //If there are any config objects -
@@ -70,9 +77,9 @@ export default {create:(config)=>{
 
         let _callback = (message, uuid)=>{
             console.log(uuid, " - THE CALLBACK - ", message);
-            console.log(" - THE CALLBACK - h", h);
-
-            h.setText(message.text);
+            //if(message.text){
+                h.setText(message.text)
+            //};
         };
 
         OpenfinHeaderInterapp.subscribeWithWildcard(Enums.COMMON_HEADER_CHANGED, _callback);

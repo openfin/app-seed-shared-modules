@@ -16,8 +16,8 @@ export default function(){
         alwaysOnTop: false,
         autoShow: true,
         cornerRounding: {
-            width: 15,
-            height: 15
+            width: 0,
+            height: 0
         },
         defaultCentered:false,
         defaultHeight:300,

@@ -1,3 +1,15 @@
 .no-drag{
   -webkit-app-region: no-drag;
 }
+.content{
+  padding: 30px;
+}
+body{
+  background-color: #cccccc;
+  height:100%;
+  border: 1px solid #afafaf;
+}
+
+html{
+  height: 100%;
+}

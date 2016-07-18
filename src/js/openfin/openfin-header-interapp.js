@@ -1,13 +1,10 @@
-/**
- * Created by grahamclapham on 15/07/16.
- */
+//Enums are just constants
 import Enums from '../Enums.js';
 
 let OpenfinHeaderInterapp = {
     subscribeWithWildcard: function(Event, callBack){
         console.log("OpenfinHeaderInterapp called with Event: ",Event);
         fin.desktop.main(()=>{
-
             fin.desktop.InterApplicationBus.subscribe("*",
                 Event,
                 callBack,

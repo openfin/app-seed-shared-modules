@@ -26,7 +26,7 @@ function init(){
 
 function initCommon(){
 
-    let _header = HeaderVanilla.create({text:"This is the new text..."});
+    let _header = HeaderVanilla.create({text:"Headline text"});
     _header.render(document.querySelector('#content-vanilla'));
 
     ReactDOM.render(
@@ -46,12 +46,12 @@ function initWithOpenFin(){
     document.querySelector('#new-window-button').addEventListener('click', ()=>{
 
         OpenFinNewWindow().then((w)=>{
-            console.log("THe new window is ", w);
+            console.log("The new window is ", w);
         })
     });
 
     document.querySelector('#publish-test-button').addEventListener('click', ()=>{
-        fin.desktop.InterApplicationBus.publish(Enums.COMMON_HEADER_CHANGED, {test:'test'})
+        fin.desktop.InterApplicationBus.publish(Enums.COMMON_HEADER_CHANGED, {text:'Text passed from button Event'})
     });
 }
 
@@ -60,10 +60,5 @@ function initNoOpenFin(){
     document.querySelector('#new-window-button').addEventListener('click', ()=>{
         alert("No OpenFinAvailable");
     });
-
-}
-
-function createNewWindow(){
-
 }
 
