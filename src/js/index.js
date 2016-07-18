@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import App from '../js/App.js';
 import Header from '../js/components/common-header.js';
 import HeaderVanilla from '../js/vanilla_conmponents/vanilla-header.js';
-import OpenFinNewWindow from '../js/openfin/openfin-new-window.js'
+import OpenFinNewWindow from '../js/openfin/openfin-new-window.js';
+import Enums from '../js/Enums.js'
 import 'core-js';
 
 require  ("../sass/entry.scss");
@@ -13,9 +14,7 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 
 function init(){
-    console.log("Dom Loaded ", this);
     initCommon();
-
     try{
         fin.desktop.main(function(){
             initWithOpenFin();
@@ -27,7 +26,7 @@ function init(){
 
 function initCommon(){
 
-   let _header = HeaderVanilla.create({text:"This is the new text..."});
+    let _header = HeaderVanilla.create({text:"This is the new text..."});
     _header.render(document.querySelector('#content-vanilla'));
 
     ReactDOM.render(
@@ -49,15 +48,19 @@ function initWithOpenFin(){
         OpenFinNewWindow().then((w)=>{
             console.log("THe new window is ", w);
         })
-    })
+    });
+
+    document.querySelector('#publish-test-button').addEventListener('click', ()=>{
+        fin.desktop.InterApplicationBus.publish(Enums.COMMON_HEADER_CHANGED, {test:'test'})
+    });
 }
 
 function initNoOpenFin(){
     console.log("OpenFin is not available - you are probably running in a browser.");
     document.querySelector('#new-window-button').addEventListener('click', ()=>{
         alert("No OpenFinAvailable");
+    });
 
-    })
 }
 
 function createNewWindow(){

@@ -1,10 +1,20 @@
 /**
  * Created by grahamclapham on 15/07/16.
  */
+import Enums from '../Enums.js';
 
 let OpenfinHeaderInterapp = {
-    listen:()=>{
-        return "OpenfinHeaderInterapp";
+    subscribeWithWildcard: function(Event, callBack){
+        console.log("OpenfinHeaderInterapp called with Event: ",Event);
+        fin.desktop.main(()=>{
+
+            fin.desktop.InterApplicationBus.subscribe("*",
+                Event,
+                callBack,
+                ()=>{console.log("Subscribed")},
+                ()=>{console.log("Not Subscribed")}
+            )
+        });
     }
 };
 
