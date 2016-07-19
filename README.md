@@ -134,6 +134,7 @@ import ReactHeader from '../src/js/components/common-header.js';
 ```
 Then you are able to write your tests against your React components. See the API documentation on the [React](https://facebook.github.io/react/docs/test-utils.html) site. 
 
+To install as an OpenFin app click on the link below. For the app to run the localhost sever must be started by running 'node server' in the terminal.
 
 [https://dl.openfin.co/services/download?fileName=openfin_modules&config=http://localhost:9075/app_local.json](https://dl.openfin.co/services/download?fileName=openfin_modules&config=http://localhost:9075/app_local.json)
 
