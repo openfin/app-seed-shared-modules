@@ -24,7 +24,7 @@ var config = {
                 query: {
                     presets: ['react', 'es2015']
                 },
-                "plugins": ["transform-object-assign"],
+                "plugins": []
             },
 
             {
@@ -35,7 +35,6 @@ var config = {
                 loaders: ['style', 'css', 'sass']
             },
             { test: /\.png$/, loader: "url-loader?limit=100000" }
-
         ]
     }
 };

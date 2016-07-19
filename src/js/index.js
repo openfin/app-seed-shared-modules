@@ -32,7 +32,7 @@ function initCommon(){
     ReactDOM.render(
         (
             <div>
-                <Header />
+                <Header headline ={"Set headline"} subHeadline={'Set subHeadline'}/>
                 <App location={['about']} />
             </div>
         ),
