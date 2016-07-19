@@ -9,7 +9,6 @@ export default class Header extends React.Component {
         };
     }
 
-
     render() {
         return (<div className="common-header">
             <div className="main-header">
@@ -25,5 +24,5 @@ export default class Header extends React.Component {
 
 Header.defaultProps =  {
     headline: "This is the default headline",
-    subHeadline: "The subheadline"
+    subHeadline: "The subHeadline"
 }
