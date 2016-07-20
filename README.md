@@ -9,7 +9,7 @@ The project require some setting up and configuring and the steps are explained 
 
 React is included in the project but is optional, it could be used as a starting point for 'vanilla' js apps. 
 
-To build the project, clone the GitHub repo and, in a command line terminal (preferably GitBash on a Windows machine) navigate to the root directory and run:
+To build the project, clone the GitHub repo and, in a command line terminal (preferably GitBash on a Windows machine), navigate to the root directory and run:
 
 ```
 $ npm install
@@ -133,6 +133,9 @@ import TestUtils from 'react/lib/ReactTestUtils.js';
 import ReactHeader from '../src/js/components/common-header.js';
 ```
 Then you are able to write your tests against your React components. See the API documentation on the [React](https://facebook.github.io/react/docs/test-utils.html) site. 
+
+###OpenFin
+
 
 To install as an OpenFin app click on the link below. For the app to run the localhost sever must be started by running 'node server' in the terminal.
 
