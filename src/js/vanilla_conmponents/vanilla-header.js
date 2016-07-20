@@ -24,9 +24,11 @@ let Header = {
 
         if(_input) {
             _input.addEventListener('input', (e)=>{
-                console.log(" text:e.target.value ",e.target.value);
-
-                fin.desktop.InterApplicationBus.publish(Enums.COMMON_HEADER_CHANGED, {text:e.target.value})
+                try{
+                    fin.desktop.InterApplicationBus.publish(Enums.COMMON_HEADER_CHANGED, {text:e.target.value})
+                }catch(err){
+                    //--
+                }
             });
 
             _input.focus();
@@ -86,7 +88,7 @@ export default {create:(config)=>{
 
 
     })}catch(e){
-        console.log("OpenFin is NOT there ")
+        console.log("OpenFin is NOT available.")
     };
 
     return h;

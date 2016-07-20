@@ -7,7 +7,25 @@ export default class Header extends React.Component {
         this.state = {
 
         };
+    };
+
+    componentWillMount () {
+
+    };
+
+
+    componentDidMount () {
+
+    };
+
+    componentWillReceiveProps (nextProps){
+        console.log("componentWillReceiveProps: nextProps ",nextProps)
     }
+
+    shouldComponentUpdate (nextProps, nextState) {
+        console.log(nextProps, nextState)
+    }
+
 
     render() {
         return (<div className="common-header">
@@ -21,8 +39,12 @@ export default class Header extends React.Component {
     }
 }
 
-
 Header.defaultProps =  {
     headline: "This is the default headline",
     subHeadline: "The subHeadline"
-}
+};
+
+Header.propTypes ={
+    headline: React.PropTypes.string,
+    subHeadline: React.PropTypes.string
+};
