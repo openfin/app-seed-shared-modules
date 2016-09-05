@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
               <Header headline ={"Child window headline"} subHeadline={'Child window subHeadline'}/>
            </div>
        ),
-       document.querySelector('#content')
+       document.querySelector('#react-header')
    );
 
    let _header = HeaderVanilla.create({text:"This is the new text..."});
