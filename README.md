@@ -1,5 +1,5 @@
-#HTML5 and OpenFin modular development
-###A guide to building HTML5 webb apps in OpenFin, using ES6, SASS, WebPack and React (optional)
+# HTML5 and OpenFin modular development
+### A guide to building HTML5 webb apps in OpenFin, using ES6, SASS, WebPack and React (optional)
 
 The purpose of this repo is to show the possibility of developing HTML5 and OpenFin apps in a modular way. 
 
@@ -31,8 +31,8 @@ $ node server
 
 This will start a webserver at [http://localhost:9075/](http://localhost:9075/)
 
-##Project organisation
-###JavaScript
+## Project organisation
+### JavaScript
 The raw, source files, are in 'src' and are output to 'build' after post-processing through WebPack. WebPack takes care of both javaScript and Sass postprocessing. The HTML files live in the build folder. 
 
 Since there are two output files - the Main window and the Child window - there are two config files "webpack.config.js" and "webpack-childwin.config.js".
@@ -65,7 +65,7 @@ $ npm run build-child
 
 Run each script in a seperate terminal as they start long-running 'watches' - polling for changes in the source code and compiling on the fly.
 
-###CSS/SASS
+### CSS/SASS
 The base for the css is Bootstrap-sass. It is installed via npm and then required into the 'sass/entry.scss' file, directly from the 'node_modules' folder and then compiled, via WebPack, for output. The BootStrap base may them be extended by app-specific or module-specific 'partials' - as below.
 
 ```
@@ -95,7 +95,7 @@ require  ("../sass/entry.scss");
 ```
 It is then compiled into the project.
 
-###Unit testing
+### Unit testing
 Unit testing in this project uses Jasmine as the testing framework and Karma as the test runner. To run the tests, in the terminal window, navigate to the root of the project and run:
 
 ```
@@ -134,7 +134,7 @@ import ReactHeader from '../src/js/components/common-header.js';
 ```
 Then you are able to write your tests against your React components. See the API documentation on the [React](https://facebook.github.io/react/docs/test-utils.html) site. 
 
-###OpenFin
+### OpenFin
 The app is setup as an OpenFin app but with 'try/catch' checks set up to prevent the app breaking if viewed in a browser and allowing the individual components to be unit tested, again, without throwing errors.
 
 The app uses the OpenFin [InterApplicationBus](http://cdn.openfin.co/jsdocs/stable/fin.desktop.module_InterApplicationBus.html) to update all the common headers when one is changed. 
