@@ -50,7 +50,7 @@ export default function(){
         /* state: A string that sets the window to be "minimized", "maximized", or "normal" on creation. Default: "normal" */
         state:"normal",
         /* The URL of the window. Default: "about:blank" */
-        url: "https://openfin.github.io/build/ChildWindow.html"
+        url: "https://openfin.github.io/app-seed-shared-modules/build/ChildWindow.html"
     };
 
     var _this = this;
