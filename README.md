@@ -135,11 +135,24 @@ import ReactHeader from '../src/js/components/common-header.js';
 Then you are able to write your tests against your React components. See the API documentation on the [React](https://facebook.github.io/react/docs/test-utils.html) site. 
 
 ### OpenFin
-The app is setup as an OpenFin app but with 'try/catch' checks set up to prevent the app breaking if viewed in a browser and allowing the individual components to be unit tested, again, without throwing errors.
+The app is setup as an OpenFin app but with 'try/catch' checks set up to prevent the app breaking if viewed in a browser and allowing the individual components to be unit tested, again, without throwing errors. You can see the in-browser homepage [here](https://openfin.github.io/app-seed-shared-modules/build/index.html)
 
 The app uses the OpenFin [InterApplicationBus](http://cdn.openfin.co/jsdocs/stable/fin.desktop.module_InterApplicationBus.html) to update all the common headers when one is changed. 
 
-To install as an OpenFin app click on the link below. For the app to run the localhost sever must be started by running 'node server' in the terminal.
+For quick launch:
+
+#### Windows
+
+[Windows Installer](https://dl.openfin.co/services/download?fileName=AppSeedSharedModules&config=https://openfin.github.io/app-seed-shared-modules/build/app_local.json)
+
+#### Mac
+
+```bash
+npm install --global openfin-cli
+openfin --launch --config https://openfin.github.io/app-seed-shared-modules/build/app_local.json
+```
+
+To install the local app click on the link below. For the app to run the localhost sever must be started by running 'node server' in the terminal.
 
 [https://dl.openfin.co/services/download?fileName=openfin_modules&config=http://localhost:9075/app_local.json](https://dl.openfin.co/services/download?fileName=openfin_modules&config=http://localhost:9075/app_local.json)
 
