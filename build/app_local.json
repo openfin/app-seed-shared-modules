@@ -2,7 +2,7 @@
   "startup_app": {
     "name": "Openfin Modules",
     "description": "Openfin Modules Demo",
-    "url": "http://localhost:9075",
+    "url": "https://openfin.github.io/app-seed-shared-modules/build/index.html",
     "icon": "http://cdn.openfin.co/demos/hyperblotter/images/hyperblotter_icon.ico",
     "uuid": "OpenfinModules",
     "autoShow": true,
@@ -25,7 +25,7 @@
   },
   "runtime": {
     "arguments": "",
-    "version": "5.44.9.2"
+    "version": "stable"
   },
   "shortcut": {
     "company": "OpenFin",
