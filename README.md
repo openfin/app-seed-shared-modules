@@ -156,3 +156,10 @@ To install the local app click on the link below. For the app to run the localho
 
 [https://dl.openfin.co/services/download?fileName=openfin_modules&config=http://localhost:9075/app_local.json](https://dl.openfin.co/services/download?fileName=openfin_modules&config=http://localhost:9075/app_local.json)
 
+## License
+MIT
+
+The code in this repository is covered by the included license.  If you run this code, it may call on the OpenFin RVM or OpenFin Runtime, which are subject to OpenFin’s [Developer License](https://openfin.co/developer-agreement/). If you have questions, please contact support@openfin.co
+
+## Support
+Please enter an issue in the repo for any questions or problems. Alternatively, please contact us at support@openfin.co 
